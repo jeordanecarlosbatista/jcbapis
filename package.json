@@ -4,17 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "build:all": "lerna run build",
+    "test:all": "lerna run test",
+    "publish:all": "lerna publish from-package --registry https://npm.pkg.github.com --yes --summary-file"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeordanecarlosbatista/jcbapis.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeordanecarlosbatista/jcbapis/issues"
+  },
+  "homepage": "https://github.com/jeordanecarlosbatista/jcbapis#readme",
   "devDependencies": {
-    "@types/jest": "^29.5.8",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.2.2"
+    "lerna": "^7.4.2"
+  },
+  "engines": {
+    "node": "20.9.0"
   }
 }

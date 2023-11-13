@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "lib",
+    "outDir": "./dist",
+    "paths": {
+      "@lib/*": ["./*"],
+      "@test/*": ["../test/*"]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 type EventHandler = (...args: any[]) => void;
 
-export class EventEmitter {
+export abstract class EventEmitter {
   private events: { [key: string]: EventHandler[] } = {};
 
   public on(event: string, handler: EventHandler): void {
